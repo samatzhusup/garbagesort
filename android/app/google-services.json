@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1097664930417",
+    "project_id": "bigarbagesort",
+    "storage_bucket": "bigarbagesort.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097664930417:android:6a6accb811e5bafcc731d0",
+        "android_client_info": {
+          "package_name": "com.daydone.garbagesort"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097664930417-q8o3gerhdu6aavuej62hr11hah5qq98i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.daydone.garbagesort",
+            "certificate_hash": "f8c36d8209593dbedf99f360a195445f15e4ff16"
+          }
+        },
+        {
+          "client_id": "1097664930417-626rll4joa7nusfbtaoerai60qpof2nd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-3OMih5lD698YCGebGYuaruMopiFs3k0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1097664930417-626rll4joa7nusfbtaoerai60qpof2nd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
