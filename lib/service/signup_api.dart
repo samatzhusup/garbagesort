@@ -18,21 +18,13 @@ class GarbageBagService {
   }
 
   Future<void> updateStatus(String bagId,status) async {
-    Firestore.instance.collection("clinetbag").document(bagId).updateData(status).catchError((e) {
+    Firestore.instance.collection("garbagebag").document(bagId).updateData(status).catchError((e) {
       print(e);
     });
   }
 
-  Stream<List<Garbage>> getClientHomeGarbageBag(String uId) {
-    return _db.collection('clinetbag').where("uid",isEqualTo: uId).where("status",isEqualTo: "home").orderBy("created",descending: true).snapshots().map(
-            (snapshot) => snapshot.documents.map(
-               (doc) => Garbage.fromMap(doc.data, doc.documentID),
-        ).toList()
-    );
-  }
-
-  Stream<List<Garbage>> getClientGarbageBaginCon(String uId) {
-    return _db.collection('clinetbag').where("uid",isEqualTo: uId).where("status",isEqualTo: "container").snapshots().map(
+  Stream<List<Garbage>> getClientGarbageBag(String clientId) {
+    return _db.collection('garbagebag').where("clientId",isEqualTo: clientId).snapshots().map(
             (snapshot) => snapshot.documents.map(
               (doc) => Garbage.fromMap(doc.data, doc.documentID),
         ).toList()
@@ -45,16 +37,6 @@ class GarbageBagService {
             (doc) => Garbage.fromMap(doc.data, doc.documentID),
       ).toList()
     );
-  }
-
-  Future<void> createPlasticBag(data) async {
-    Firestore.instance.collection("clinetbag").add(data).catchError((e) {
-      print(e);
-    });
-  }
-
-  Stream<DocumentSnapshot> getGarbageList (String bagId) {
-    return _db.collection('clinetbag').document(bagId).snapshots();
   }
 
 }
